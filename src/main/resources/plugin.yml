@@ -1,0 +1,11 @@
+name: TemplatePlugin
+version: '${project.version}'
+main: me.alvsch.templateplugin.TemplatePlugin
+api-version: 1.14
+authors: [ Alvsch1 ]
+commands:
+
+  templateplugin:
+    usage: "/<command>"
+    description: "The main command for the plugin: TemplatePlugin"
+    aliases: []
