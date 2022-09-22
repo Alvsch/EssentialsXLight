@@ -10,6 +10,7 @@ commands:
     description: "The main command for the plugin: EssentialsXLight"
     aliases: [exl, el, essentialslight]
 
+
   gamemode:
     usage: "/<command>"
     description: ""
@@ -22,15 +23,41 @@ commands:
     description: ""
     permission: ""
     permission-message: ""
-
   gmc:
     usage: "/<command>"
     description: ""
-
   gmsp:
     usage: "/<command>"
     description: ""
-
   gms:
     usage: "/<command>"
     description: ""
+
+
+  teleport:
+    usage: "/<command>"
+    description: ""
+    permission: ""
+    permission-message: ""
+    aliases: [ tp ]
+
+  tpaccept:
+    usage: "/<command>"
+    description: ""
+    permission: ""
+    permission-message: ""
+    aliases: [ ]
+
+  tpa:
+    usage: "/<command>"
+    description: ""
+    permission: ""
+    permission-message: ""
+    aliases: [ tpask ]
+
+  tphere:
+    usage: "/<command>"
+    description: ""
+    permission: ""
+    permission-message: ""
+    aliases: [  ]
