@@ -43,7 +43,7 @@ public class Reload extends SubCommand {
 
     @Override
     public String getPermission() {
-        return "essentialsxlight.reload";
+        return "essentials.reload";
     }
 
     @Override

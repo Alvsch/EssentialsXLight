@@ -8,4 +8,29 @@ commands:
   essentialsxlight:
     usage: "/<command>"
     description: "The main command for the plugin: EssentialsXLight"
-    aliases: []
+    aliases: [exl, el, essentialslight]
+
+  gamemode:
+    usage: "/<command>"
+    description: ""
+    permission: ""
+    permission-message: ""
+    aliases: [gm]
+
+  gma:
+    usage: "/<command>"
+    description: ""
+    permission: ""
+    permission-message: ""
+
+  gmc:
+    usage: "/<command>"
+    description: ""
+
+  gmsp:
+    usage: "/<command>"
+    description: ""
+
+  gms:
+    usage: "/<command>"
+    description: ""

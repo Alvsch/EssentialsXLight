@@ -1,6 +1,7 @@
 package me.alvsch.essentialsxlight;
 
 import me.alvsch.essentialsxlight.commands.CommandManager;
+import me.alvsch.essentialsxlight.commands.commands.gamemode.*;
 import me.alvsch.essentialsxlight.commands.main.MainCommand;
 import me.alvsch.essentialsxlight.events.InventoryListener;
 import me.alvsch.essentialsxlight.events.PlayerListener;
@@ -70,6 +71,12 @@ public final class EssentialsXLight extends JavaPlugin {
 
         // Main
         commandManager.addCommand(new MainCommand(this));
+
+        commandManager.addCommand(new Gamemode(this));
+        commandManager.addCommand(new GamemodeAdventure(this));
+        commandManager.addCommand(new GamemodeCreative(this));
+        commandManager.addCommand(new GamemodeSpectator(this));
+        commandManager.addCommand(new GamemodeSurvival(this));
 
 
         // Init
