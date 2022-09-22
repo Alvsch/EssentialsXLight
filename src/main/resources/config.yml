@@ -1,0 +1,12 @@
+
+
+# PLACEHOLDERS:
+# {PLAYER} - The player's displayname
+# {USERNAME} - The player's username
+# Set to "none" to use minecraft default and set to "" to disable
+
+custom-join-message: "none"
+custom-first-join-message: "none"
+custom-quit-message: "none"
+
+custom-motd: "none"
