@@ -1,4 +1,4 @@
-package me.alvsch.templateplugin.utils;
+package me.alvsch.essentialsxlight.utils;
 
 import org.bukkit.Bukkit;
 import org.bukkit.inventory.Inventory;

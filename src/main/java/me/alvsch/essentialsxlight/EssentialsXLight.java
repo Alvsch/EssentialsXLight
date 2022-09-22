@@ -1,13 +1,11 @@
-package me.alvsch.templateplugin;
+package me.alvsch.essentialsxlight;
 
-import me.alvsch.templateplugin.commands.CommandManager;
-import me.alvsch.templateplugin.commands.main.MainCommand;
-import me.alvsch.templateplugin.events.InventoryListener;
-import me.alvsch.templateplugin.events.PlayerListener;
-import me.alvsch.templateplugin.events.ServerListener;
-import me.alvsch.templateplugin.utils.UpdateChecker;
-import me.alvsch.templateplugin.utils.Utils;
-import org.bstats.bukkit.Metrics;
+import me.alvsch.essentialsxlight.commands.CommandManager;
+import me.alvsch.essentialsxlight.commands.main.MainCommand;
+import me.alvsch.essentialsxlight.events.InventoryListener;
+import me.alvsch.essentialsxlight.events.PlayerListener;
+import me.alvsch.essentialsxlight.events.ServerListener;
+import me.alvsch.essentialsxlight.utils.UpdateChecker;
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -16,10 +14,9 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.UUID;
 
-public final class TemplatePlugin extends JavaPlugin {
+public final class EssentialsXLight extends JavaPlugin {
 
     public enum Version{LATEST, OUTDATED, UNSTABLE}
     private Version version;
@@ -50,7 +47,7 @@ public final class TemplatePlugin extends JavaPlugin {
         Logger.log(Logger.LogLevel.INFO, "Files are loading!");
         createFiles();
         Logger.log(Logger.LogLevel.INFO, "Files are loaded!");
-        new UpdateChecker(this, "Alvsch/TemplatePlugin").getLatestVersion(version -> {
+        new UpdateChecker(this, "Alvsch/EssentialsXLight").getLatestVersion(version -> {
 
             if(this.getDescription().getVersion().equalsIgnoreCase(version)) {
                 this.version = Version.LATEST;

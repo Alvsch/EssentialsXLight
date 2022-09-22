@@ -1,6 +1,6 @@
 primary-color: "&6"
 secondary-color: "&4"
-plugin-prefix: "[TemplatePlugin]"
+plugin-prefix: "[EssentialsXLight]"
 
 reloading: "&aReloading plugin config.yml and language.yml"
 reloaded: "&aReloaded plugin config.yml and language.yml"

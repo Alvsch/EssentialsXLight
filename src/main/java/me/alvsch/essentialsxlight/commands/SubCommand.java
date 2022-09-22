@@ -1,18 +1,18 @@
-package me.alvsch.templateplugin.commands;
+package me.alvsch.essentialsxlight.commands;
 
-import me.alvsch.templateplugin.TemplatePlugin;
+import me.alvsch.essentialsxlight.EssentialsXLight;
 import org.bukkit.command.CommandSender;
 
 import java.util.ArrayList;
 
 public abstract class SubCommand {
 
-    protected TemplatePlugin plugin;
+    protected EssentialsXLight plugin;
 
     private final ArrayList<CommandManager.Requirement> requirements = new ArrayList<>();
     private final Command command;
 
-    public SubCommand(TemplatePlugin plugin, Command command) {
+    public SubCommand(EssentialsXLight plugin, Command command) {
         this.plugin = plugin;
         this.command = command;
     }

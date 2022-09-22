@@ -1,6 +1,6 @@
-package me.alvsch.templateplugin.commands;
+package me.alvsch.essentialsxlight.commands;
 
-import me.alvsch.templateplugin.TemplatePlugin;
+import me.alvsch.essentialsxlight.EssentialsXLight;
 import org.bukkit.command.CommandSender;
 
 import java.util.ArrayList;
@@ -8,13 +8,13 @@ import java.util.List;
 
 public abstract class Command {
 
-    protected TemplatePlugin plugin;
+    protected EssentialsXLight plugin;
 
     private final ArrayList<CommandManager.Requirement> requirements = new ArrayList<>();
     private final ArrayList<SubCommand> subCommands = new ArrayList<>();
     private final org.bukkit.command.Command command;
 
-    public Command(TemplatePlugin plugin) {
+    public Command(EssentialsXLight plugin) {
         this.plugin = plugin;
         this.command = plugin.getCommand(getName());
     }

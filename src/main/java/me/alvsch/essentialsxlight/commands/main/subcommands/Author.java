@@ -1,9 +1,9 @@
-package me.alvsch.templateplugin.commands.main.subcommands;
+package me.alvsch.essentialsxlight.commands.main.subcommands;
 
-import me.alvsch.templateplugin.TemplatePlugin;
-import me.alvsch.templateplugin.commands.Command;
-import me.alvsch.templateplugin.commands.SubCommand;
-import me.alvsch.templateplugin.utils.Utils;
+import me.alvsch.essentialsxlight.EssentialsXLight;
+import me.alvsch.essentialsxlight.commands.Command;
+import me.alvsch.essentialsxlight.commands.SubCommand;
+import me.alvsch.essentialsxlight.utils.Utils;
 import org.bukkit.command.CommandSender;
 
 import java.util.ArrayList;
@@ -12,7 +12,7 @@ import java.util.Iterator;
 public class Author extends SubCommand {
 
 
-    public Author(TemplatePlugin plugin, Command command) {
+    public Author(EssentialsXLight plugin, Command command) {
         super(plugin, command);
     }
 

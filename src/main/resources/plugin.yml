@@ -1,11 +1,11 @@
-name: TemplatePlugin
+name: EssentialsXLight
 version: '${project.version}'
-main: me.alvsch.templateplugin.TemplatePlugin
+main: me.alvsch.essentialsxlight.EssentialsXLight
 api-version: 1.14
 authors: [ Alvsch1 ]
 commands:
 
-  templateplugin:
+  essentialsxlight:
     usage: "/<command>"
-    description: "The main command for the plugin: TemplatePlugin"
+    description: "The main command for the plugin: EssentialsXLight"
     aliases: []

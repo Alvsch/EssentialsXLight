@@ -1,7 +1,7 @@
-package me.alvsch.templateplugin.utils;
+package me.alvsch.essentialsxlight.utils;
 
 import com.google.gson.JsonObject;
-import me.alvsch.templateplugin.TemplatePlugin;
+import me.alvsch.essentialsxlight.EssentialsXLight;
 import org.bukkit.Bukkit;
 
 import java.io.IOException;
@@ -9,10 +9,10 @@ import java.util.function.Consumer;
 
 public class UpdateChecker {
 
-    private TemplatePlugin plugin;
+    private EssentialsXLight plugin;
     private final String repo;
 
-    public UpdateChecker(TemplatePlugin plugin, String repo) {
+    public UpdateChecker(EssentialsXLight plugin, String repo) {
         this.plugin = plugin;
         this.repo = repo;
     }

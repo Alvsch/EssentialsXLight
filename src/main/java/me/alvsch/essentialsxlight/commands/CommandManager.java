@@ -1,7 +1,7 @@
-package me.alvsch.templateplugin.commands;
+package me.alvsch.essentialsxlight.commands;
 
-import me.alvsch.templateplugin.TemplatePlugin;
-import me.alvsch.templateplugin.utils.Utils;
+import me.alvsch.essentialsxlight.EssentialsXLight;
+import me.alvsch.essentialsxlight.utils.Utils;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -14,29 +14,29 @@ import java.util.List;
 
 public class CommandManager implements CommandExecutor, TabCompleter {
 
-    private final ArrayList<me.alvsch.templateplugin.commands.Command> commands = new ArrayList<>();
-    TemplatePlugin plugin;
+    private final ArrayList<me.alvsch.essentialsxlight.commands.Command> commands = new ArrayList<>();
+    EssentialsXLight plugin;
 
-    public CommandManager(TemplatePlugin plugin) {
+    public CommandManager(EssentialsXLight plugin) {
         this.plugin = plugin;
     }
 
     @SuppressWarnings("ConstantConditions")
     public void init() {
         // Load all commands
-        for(me.alvsch.templateplugin.commands.Command command : commands) {
+        for(me.alvsch.essentialsxlight.commands.Command command : commands) {
             plugin.getCommand(command.getName()).setExecutor(this);
             plugin.getCommand(command.getName()).setTabCompleter(this);
         }
     }
-    public void addCommand(me.alvsch.templateplugin.commands.Command command) {
+    public void addCommand(me.alvsch.essentialsxlight.commands.Command command) {
         commands.add(command);
     }
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         // Get command
-        me.alvsch.templateplugin.commands.Command cmd = this.get(command.getName());
+        me.alvsch.essentialsxlight.commands.Command cmd = this.get(command.getName());
 
         // Meets requirements
         ArrayList<Requirement> requirements = cmd.getRequirements();
@@ -97,13 +97,13 @@ public class CommandManager implements CommandExecutor, TabCompleter {
         return this.get(command.getName()).onTabComplete(sender, args);
     }
 
-    public me.alvsch.templateplugin.commands.Command get(String command) {
-        for(me.alvsch.templateplugin.commands.Command c : this.commands) {
+    public me.alvsch.essentialsxlight.commands.Command get(String command) {
+        for(me.alvsch.essentialsxlight.commands.Command c : this.commands) {
             if(c.getName().equalsIgnoreCase(command)) return c;
         }
         return null;
     }
-    public SubCommand getSub(String subcommand, me.alvsch.templateplugin.commands.Command cmd) {
+    public SubCommand getSub(String subcommand, me.alvsch.essentialsxlight.commands.Command cmd) {
         for(SubCommand sc : cmd.getSubCommands()) {
             if(sc.getName().equalsIgnoreCase(subcommand)) return sc;
 
@@ -116,7 +116,7 @@ public class CommandManager implements CommandExecutor, TabCompleter {
         return null;
     }
 
-    private String syntaxMsg(me.alvsch.templateplugin.commands.Command command) {
+    private String syntaxMsg(me.alvsch.essentialsxlight.commands.Command command) {
         StringBuilder sb = new StringBuilder();
 
         sb.append("----- ").append(Utils.title(command.getName())).append(" -----").append("\n");

@@ -1,9 +1,9 @@
-package me.alvsch.templateplugin.commands.main.subcommands;
+package me.alvsch.essentialsxlight.commands.main.subcommands;
 
 
-import me.alvsch.templateplugin.TemplatePlugin;
-import me.alvsch.templateplugin.commands.Command;
-import me.alvsch.templateplugin.commands.SubCommand;
+import me.alvsch.essentialsxlight.EssentialsXLight;
+import me.alvsch.essentialsxlight.commands.Command;
+import me.alvsch.essentialsxlight.commands.SubCommand;
 import org.bukkit.command.CommandSender;
 
 import java.util.ArrayList;
@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class Reload extends SubCommand {
 
 
-    public Reload(TemplatePlugin plugin, Command command) {
+    public Reload(EssentialsXLight plugin, Command command) {
         super(plugin, command);
     }
 
@@ -43,7 +43,7 @@ public class Reload extends SubCommand {
 
     @Override
     public String getPermission() {
-        return "templateplugin.reload";
+        return "essentialsxlight.reload";
     }
 
     @Override

@@ -1,10 +1,10 @@
-package me.alvsch.templateplugin.commands.main;
+package me.alvsch.essentialsxlight.commands.main;
 
 
-import me.alvsch.templateplugin.TemplatePlugin;
-import me.alvsch.templateplugin.commands.Command;
-import me.alvsch.templateplugin.commands.main.subcommands.Author;
-import me.alvsch.templateplugin.commands.main.subcommands.Reload;
+import me.alvsch.essentialsxlight.EssentialsXLight;
+import me.alvsch.essentialsxlight.commands.Command;
+import me.alvsch.essentialsxlight.commands.main.subcommands.Author;
+import me.alvsch.essentialsxlight.commands.main.subcommands.Reload;
 import org.bukkit.command.CommandSender;
 
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.List;
 public class MainCommand extends Command {
 
 
-    public MainCommand(TemplatePlugin plugin) {
+    public MainCommand(EssentialsXLight plugin) {
         super(plugin);
 
         addSubCommand(new Reload(plugin, this));
@@ -21,7 +21,7 @@ public class MainCommand extends Command {
 
     @Override
     public String getName() {
-        return "templateplugin";
+        return "essentialsxlight";
     }
 
     @Override

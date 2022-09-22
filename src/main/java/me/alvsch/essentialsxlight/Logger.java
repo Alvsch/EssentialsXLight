@@ -1,6 +1,6 @@
-package me.alvsch.templateplugin;
+package me.alvsch.essentialsxlight;
 
-import me.alvsch.templateplugin.utils.Utils;
+import me.alvsch.essentialsxlight.utils.Utils;
 import org.bukkit.Bukkit;
 
 public class Logger {
