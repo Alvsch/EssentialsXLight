@@ -30,6 +30,11 @@ public class GamemodeSurvival extends Command {
     public boolean onCommand(CommandSender sender, String[] args) {
         Player player = (Player) sender;
 
+        if(!player.hasPermission("essentials.gamemode.survival") && !player.hasPermission("essentials.gamemode.all")) {
+            player.sendMessage(plugin.getPhrase("command.permission-message"));
+            return true;
+        }
+
         if(!(args.length >= 1)) {
             player.setGameMode(GameMode.SURVIVAL);
             return true;

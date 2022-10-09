@@ -15,14 +15,11 @@ commands:
     usage: "/<command>"
     description: ""
     permission: ""
-    permission-message: ""
     aliases: [gm]
-
   gma:
     usage: "/<command>"
     description: ""
     permission: ""
-    permission-message: ""
   gmc:
     usage: "/<command>"
     description: ""
@@ -33,31 +30,5 @@ commands:
     usage: "/<command>"
     description: ""
 
-
-  teleport:
-    usage: "/<command>"
-    description: ""
-    permission: ""
-    permission-message: ""
-    aliases: [ tp ]
-
-  tpaccept:
-    usage: "/<command>"
-    description: ""
-    permission: ""
-    permission-message: ""
-    aliases: [ ]
-
-  tpa:
-    usage: "/<command>"
-    description: ""
-    permission: ""
-    permission-message: ""
-    aliases: [ tpask ]
-
   tphere:
-    usage: "/<command>"
-    description: ""
-    permission: ""
-    permission-message: ""
-    aliases: [  ]
+    usage: "/<command> <player>"

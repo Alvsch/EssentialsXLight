@@ -1,13 +1,14 @@
 package me.alvsch.essentialsxlight;
 
 import me.alvsch.essentialsxlight.commands.CommandManager;
+import me.alvsch.essentialsxlight.commands.commands.fly.Fly;
+import me.alvsch.essentialsxlight.commands.commands.fly.FlySpeed;
 import me.alvsch.essentialsxlight.commands.commands.gamemode.*;
-import me.alvsch.essentialsxlight.commands.commands.teleport.Teleport;
+import me.alvsch.essentialsxlight.commands.commands.teleport.TpHere;
 import me.alvsch.essentialsxlight.commands.main.MainCommand;
 import me.alvsch.essentialsxlight.events.InventoryListener;
 import me.alvsch.essentialsxlight.events.PlayerListener;
 import me.alvsch.essentialsxlight.events.ServerListener;
-import me.alvsch.essentialsxlight.utils.UpdateChecker;
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -40,15 +41,14 @@ public final class EssentialsXLight extends JavaPlugin {
         Logger.log(Logger.LogLevel.INFO, "Events are loading...");
         registerEvents();
         Logger.log(Logger.LogLevel.INFO, "Events are loaded!");
-        Logger.log(Logger.LogLevel.INFO, "Metrics are loading...");
-        try {
-            // Metrics metrics = new Metrics(this, 0);
-        } catch (Exception ignored){
-        }
-        Logger.log(Logger.LogLevel.INFO, "Metrics are loaded!");
+
+        //Logger.log(Logger.LogLevel.INFO, "Metrics are loading...");
+        //Logger.log(Logger.LogLevel.INFO, "Metrics are loaded!");
+
         Logger.log(Logger.LogLevel.INFO, "Files are loading!");
         createFiles();
         Logger.log(Logger.LogLevel.INFO, "Files are loaded!");
+        /*
         new UpdateChecker(this, "Alvsch/EssentialsXLight").getLatestVersion(version -> {
 
             if(this.getDescription().getVersion().equalsIgnoreCase(version)) {
@@ -57,6 +57,7 @@ public final class EssentialsXLight extends JavaPlugin {
                 this.version = Version.OUTDATED;
             }
         });
+        */
         Logger.log(Logger.LogLevel.SUCCESS, "Plugin is loaded!");
         Logger.log(Logger.LogLevel.OUTLINE, "********************");
 
@@ -79,8 +80,10 @@ public final class EssentialsXLight extends JavaPlugin {
         commandManager.addCommand(new GamemodeSpectator(this));
         commandManager.addCommand(new GamemodeSurvival(this));
 
+        commandManager.addCommand(new TpHere(this));
 
-        commandManager.addCommand(new Teleport(this));
+        commandManager.addCommand(new Fly(this));
+        commandManager.addCommand(new FlySpeed(this));
 
 
         // Init

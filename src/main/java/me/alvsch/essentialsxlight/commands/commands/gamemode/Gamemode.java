@@ -48,7 +48,7 @@ public class Gamemode extends Command {
                 if(player.hasPermission("essentials.gamemode.survival") || player.hasPermission("essentials.gamemode.all")) {
                     target.setGameMode(GameMode.SURVIVAL);
                 } else {
-                    plugin.getPhrase("command.permission-message");
+                    player.sendMessage(plugin.getPhrase("command.permission-message"));
                 }
                 break;
 
@@ -59,7 +59,7 @@ public class Gamemode extends Command {
                 if(player.hasPermission("essentials.gamemode.creative") || player.hasPermission("essentials.gamemode.all")) {
                     target.setGameMode(GameMode.CREATIVE);
                 } else {
-                    plugin.getPhrase("command.permission-message");
+                    player.sendMessage(plugin.getPhrase("command.permission-message"));
                 }
                 break;
 
@@ -70,7 +70,7 @@ public class Gamemode extends Command {
                 if(player.hasPermission("essentials.gamemode.advendure") || player.hasPermission("essentials.gamemode.all")) {
                     target.setGameMode(GameMode.ADVENTURE);
                 } else {
-                    plugin.getPhrase("command.permission-message");
+                    player.sendMessage(plugin.getPhrase("command.permission-message"));
                 }
                 break;
 
@@ -81,7 +81,7 @@ public class Gamemode extends Command {
                 if(player.hasPermission("essentials.gamemode.spectator") || player.hasPermission("essentials.gamemode.all")) {
                     target.setGameMode(GameMode.SPECTATOR);
                 } else {
-                    plugin.getPhrase("command.permission-message");
+                    player.sendMessage(plugin.getPhrase("command.permission-message"));
                 }
                 break;
 
